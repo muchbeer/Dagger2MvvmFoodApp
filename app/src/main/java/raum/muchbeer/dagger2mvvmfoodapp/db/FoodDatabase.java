@@ -14,7 +14,7 @@ import raum.muchbeer.dagger2mvvmfoodapp.model.TzFood;
 import raum.muchbeer.dagger2mvvmfoodapp.model.TzFoodDao;
 
 
-@Database(entities= {FoodType.class, TzFood.class}, version = 1)
+@Database(entities= {FoodType.class, TzFood.class}, version = 1, exportSchema = false)
 public abstract class FoodDatabase extends RoomDatabase {
 
     public abstract TzFoodDao tzFoodDao();

@@ -3,7 +3,6 @@ package raum.muchbeer.dagger2mvvmfoodapp.view;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 
 import javax.inject.Inject;
@@ -24,6 +23,12 @@ public class MainActivityViewModelFactory implements ViewModelProvider.Factory {
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        return (T) new MainActivityViewModel(foodRepository);
+     //   return (T) new MainActivityViewModel(foodRepository);
+
+        if (modelClass.isAssignableFrom(MainActivityViewModel.class)) {
+            return (T) new MainActivityViewModel(foodRepository);
+        }
+        throw new IllegalArgumentException("Unknown ViewModel class");
     }
+
 }

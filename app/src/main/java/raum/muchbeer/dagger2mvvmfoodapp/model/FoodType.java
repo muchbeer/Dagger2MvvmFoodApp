@@ -5,12 +5,16 @@ import androidx.databinding.Bindable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 import static androidx.room.ForeignKey.CASCADE;
 
 @Entity(tableName = "food_type" ,foreignKeys = @ForeignKey(entity = TzFood.class,
-        parentColumns = "id",childColumns = "food_period_id",onDelete = CASCADE))
+        parentColumns = "id",childColumns = "food_period_id",onDelete = CASCADE),
+        indices = {@Index(value = {"food_type_id"}, unique = true)}
+      /*  indices = {@Index("food_type_id")}*/)
 public class FoodType extends BaseObservable {
 
     @PrimaryKey(autoGenerate = true)
@@ -26,6 +30,7 @@ public class FoodType extends BaseObservable {
     @ColumnInfo(name="food_period_id")
     private int periodId;
 
+@Ignore
     public FoodType() {
     }
 

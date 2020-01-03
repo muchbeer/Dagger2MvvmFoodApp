@@ -4,6 +4,7 @@ import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "tz_food_period")
@@ -18,8 +19,8 @@ public class TzFood  extends BaseObservable {
     @ColumnInfo(name = "food_period_description")
     private String periodDescription;
 
-    public TzFood() {
-    }
+@Ignore
+    public TzFood() {   }
 
     public TzFood(int id, String periodName, String periodDescription) {
         this.id = id;
