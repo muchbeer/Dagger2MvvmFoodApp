@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Dagger2MvvmFoodApp</string>
     <string name="food_name">FoodName</string>
-    <string name="unit_price">Uniti Price</string>
+    <string name="unit_price">Unit Price</string>
 </resources>

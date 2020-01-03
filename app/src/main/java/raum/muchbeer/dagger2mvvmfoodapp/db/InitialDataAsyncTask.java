@@ -54,14 +54,14 @@ public class InitialDataAsyncTask extends AsyncTask<Void, Void, Void> {
         foodType3.setPeriodId(1);
 
         FoodType foodType4=new FoodType();
-        foodType1.setFoodName("Chai Chapati ");
-        foodType1.setUnitPrice("TZS1000");
-        foodType1.setPeriodId(1);
+        foodType4.setFoodName("Chai Chapati ");
+        foodType4.setUnitPrice("TZS1000");
+        foodType4.setPeriodId(1);
 
         FoodType foodType5=new FoodType();
-        foodType1.setFoodName("Ugali Nyama ");
-        foodType1.setUnitPrice("TZS2500");
-        foodType1.setPeriodId(2);
+        foodType5.setFoodName("Ugali Nyama ");
+        foodType5.setUnitPrice("TZS2500");
+        foodType5.setPeriodId(2);
 
         FoodType foodType6=new FoodType();
         foodType6.setFoodName("Ugali Samaki ");
