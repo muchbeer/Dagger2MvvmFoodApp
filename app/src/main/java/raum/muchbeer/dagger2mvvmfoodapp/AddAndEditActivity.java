@@ -40,13 +40,13 @@ public class AddAndEditActivity extends AppCompatActivity {
             foodType.setFoodName(intent.getStringExtra(FOOD_NAME));
             foodType.setUnitPrice(intent.getStringExtra(UNIT_PRICE));  }
         else{
-            setTitle("Add New Book");  }
+            setTitle("Add New Food");  }
     }
 
     public class FoodClickHandlers {
         Context context;
 
-        public FoodClickHandlers(Context context) {
+        private FoodClickHandlers(Context context) {
             this.context = context;
         }
 
@@ -59,6 +59,7 @@ public class AddAndEditActivity extends AppCompatActivity {
                 intent.putExtra(UNIT_PRICE, foodType.getUnitPrice());
                 setResult(RESULT_OK,intent);
                 finish();
+                Toast.makeText(context,"Successful add Food to the app",Toast.LENGTH_LONG).show();
             }
         }
     }
